@@ -13,9 +13,9 @@ var blobfile = container.GetBlobClient("zekiri.jpg");
 await blobfile.DownloadToAsync(localFilePath);
 
 // ---------- UploadFile --------------------
-/*using (FileStream stream = File.OpenRead(localFilePath))
+using (FileStream stream = File.OpenRead(localFilePath))
 {
     string filename = Path.GetFileName(localFilePath);
     await container.UploadBlobAsync(filename, stream);
-}*/
+}
 
